@@ -8,8 +8,8 @@ console.log(details)
             console.log(details)
             if(type.length > 0){
                 const filtered = details.filter((detail)=>{
-                    console.log(detail.description)
-                    return detail.description.includes(type)
+                    console.log(detail.category)
+                    return detail.category.includes(type)
                 })
                 console.log(filtered)
                 if(filtered.lenght > 0){
