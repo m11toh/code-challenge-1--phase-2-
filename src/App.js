@@ -33,7 +33,7 @@ function App() {
    
     <div className='container'>
       <Navbar />
-      <Form details={transaction}/>
+      <Form details={transaction} />
       <Input  details={transaction}/>
       <Table details={transaction}/>
     </div>
