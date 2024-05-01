@@ -1,12 +1,12 @@
 
  function Navbar() {
-    
+   
     return(
-    <nav className="navbar bg-body-tertiary">
-        <div className="container-fluid">
-            <span className="navbar-brand mb-2 h1 text-center">The Royal Bank Of Flatiron</span>
+      <nav class="navbar bg-info">
+        <div class="container-fluid" style={{justifyContent:'center'}}>
+          <a class="navbar-brand ">The Bank Of Flatiron</a>
         </div>
-    </nav>
+      </nav>
     )
 
     

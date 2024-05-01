@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-const Form = ({transaction, setTransactions}) => {
+const Form = ({details, setTransactions}) => {
 
     const [formdata,setFormData] = useState(
         {
@@ -14,7 +14,7 @@ const Form = ({transaction, setTransactions}) => {
 
     function handleSubmit(event){
         event.preventDefault()
-        setTransactions([...transaction, formdata])
+        setTransactions([...details, formdata])
     }
 
     function handleChange(event){
@@ -36,7 +36,7 @@ const Form = ({transaction, setTransactions}) => {
                     <input className="form-control form-control-sm" onChange={handleChange} name="date" value={formdata.date} type="date" placeholder="Insert date"/>
                 </div>
                 <div className="col-3 mx-auto">
-                    <input className="form-control form-control-sm" onChange={handleChange} name="Description" value={formdata.description}type="text" placeholder="Give Descrition"/>
+                    <input className="form-control form-control-sm" onChange={handleChange} name="description" value={formdata.description}type="text" placeholder="Give Descrition"/>
                 </div>
                 <div className="col-3 mx-auto">
                     <input className="form-control form-control-sm" onChange={handleChange} name="category" type="text" value={formdata.category} placeholder="Enter Category"/>

@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-function Input({details}){
-const [data,setData] =  useState () 
+function Input({details , setTransactions ,array}){
+
 console.log(details)
         function TakeChange(event){
             const type = event.target.value
@@ -12,12 +12,12 @@ console.log(details)
                     return detail.category.includes(type)
                 })
                 console.log(filtered)
-                if(filtered.lenght > 0){
-                    setData([...filtered])
-                }else{
-                    setData(data)
-                }
-            }
+               
+                    setTransactions([...filtered])
+                
+            }else(
+                setTransactions(...[array])
+            )
         }
         return(
             <div className="m-4 p-5">

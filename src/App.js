@@ -4,13 +4,13 @@ import Table from './components/Table';
 import Input from './components/Search-icon';
 import Navbar from './Navbar';
 import Form from './components/Form';
-// import { useState } from 'react';
+import { useState } from 'react';
 
 
 function App() {
   
 
-  const transaction = [
+  const array = [
     {
         date:'13/Apr/2020',
         category:'Income',
@@ -28,13 +28,14 @@ function App() {
         amount: "300"
     }
 ]
-
+const [transaction,setTransactions] = useState(array)
+console.log(transaction);
   return (
    
     <div className='container'>
       <Navbar />
-      <Form details={transaction} />
-      <Input  details={transaction}/>
+      <Form setTransactions={setTransactions} details={transaction} />
+      <Input setTransactions={setTransactions} array={array}  details={transaction}/>
       <Table details={transaction}/>
     </div>
   );
